@@ -1,15 +1,21 @@
-import "./assets/css/mybootstrap.min.css";
+import "bootstrap/dist/css/bootstrap.min.css";
 import "./App.css";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
-import MyMain from "./components/MyMain";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import MyHeader from "./components/MyHeader";
+import HomePage from "./components/HomePage";
+import Details from "./components/Details";
 
 function App() {
   return (
-    <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<MyMain />} />
-      </Routes>
-    </BrowserRouter>
+    <div className="App">
+      <BrowserRouter>
+        <MyHeader />
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/details/:articleId" element={<Details />} />
+        </Routes>
+      </BrowserRouter>
+    </div>
   );
 }
 
