@@ -5,8 +5,8 @@ const initialState = {
   articles: [] as ArticleType[],
 };
 
-const fetchArticlesSlice = createSlice({
-  name: "fetchArticles",
+const stateReducerSlice = createSlice({
+  name: "stateReducerSlice",
   initialState,
   reducers: {
     setArticles: (state, action: PayloadAction<ArticleType[]>) => {
@@ -15,5 +15,5 @@ const fetchArticlesSlice = createSlice({
     },
   },
 });
-export const { setArticles } = fetchArticlesSlice.actions;
-export default fetchArticlesSlice.reducer;
+export const { setArticles } = stateReducerSlice.actions;
+export default stateReducerSlice.reducer;
