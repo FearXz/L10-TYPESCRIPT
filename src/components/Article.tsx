@@ -1,5 +1,5 @@
 import React from "react";
-import { ArticleType } from "../interfaces/ArticleType";
+import { ArticleType } from "../interfaces/InterfaceType";
 import { useNavigate } from "react-router-dom";
 
 interface ArticleProps {

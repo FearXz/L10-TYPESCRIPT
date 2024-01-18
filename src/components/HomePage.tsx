@@ -1,14 +1,14 @@
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { setArticles } from "../redux/reducers/fetchArticles";
-import { ArticleType } from "../interfaces/ArticleType";
-import { RootState } from "../redux/store";
+import { setArticles } from "../redux/reducers/stateReducer";
+import { ArticleType } from "../interfaces/InterfaceType";
+import { RootState } from "../redux/store/store";
 import { Col, Container, Row } from "react-bootstrap";
 import Article from "./Article";
 
 const HomePage = () => {
   const dispatch = useDispatch();
-  const articles = useSelector((state: RootState) => state.fetchReducer.articles);
+  const articles = useSelector((state: RootState) => state.globalState.articles);
 
   interface DataType {
     count: number | null;

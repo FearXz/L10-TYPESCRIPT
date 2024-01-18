@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
-import { ArticleType } from "../interfaces/ArticleType";
+import { ArticleType } from "../interfaces/InterfaceType";
 import { Container } from "react-bootstrap";
 
 const Details = () => {
